@@ -1,0 +1,16 @@
+function capitalizeFirst (oldArr) {
+  // add whatever parameters you deem necessary - good luck!
+  let newArr = [];
+  
+      if(oldArr.length > 0) {
+      newArr.push(oldArr[0].charAt(0).toUpperCase() + oldArr[0].substr(1,oldArr[0].length));
+      
+      capitalizeFirst(oldArr.slice(1));
+      
+      } else {
+          return newArr;
+      }
+  
+}
+
+console.log(capitalizeFirst(['car','taco','banana']));
